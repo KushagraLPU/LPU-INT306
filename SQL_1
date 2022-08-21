@@ -1,0 +1,47 @@
+create table employe
+(
+id number,
+name char(20),
+age number,
+salary varchar(10)
+)
+
+insert into employe values(12,'kush',19,'12k')
+insert into employe values(13,'srijan',29,'13k')
+insert into employe values(14,'sai',21,'12k')
+insert into employe values(15,'shubham',22,'14k')
+insert into employe values(16,'vinay',34,'13k')
+insert into employe values(17,'kushagra',24,'18k')
+select * from employe
+create table emp01 as select * from employe
+select * from emp01
+create table emp2 as select * from employe where 1=2
+select * from emp2
+desc emp2
+select * from employe where id=12
+select * from employe where age<=35
+select * from employe where id>13
+select * from employe where age<23
+select * from employe where age>=23
+select * from employe where id in(12,13,15)
+insert into employe values(null,'ram',25,'50k')
+select * from employe where id is null
+select * from employe where id is not null
+select * from employe where id not in(12,13,15)
+select * from employe where age between 11 and 22
+
+
+select * from employe where id=14 or age=21 and age<25
+select avg(age) from employe
+select sum(age) from employe
+select max(age) from employe
+select min(age) from employe
+select count(distinct age) from employe _
+select age from employe
+select * from employe order by age
+select * from employe order by age desc
+select * from employe order by age,id
+select * from employe order by name
+select * from employe order by salary
+select * from employe order by 2
+select * from employe where name like 'k%'
